@@ -69,7 +69,7 @@ function initPrompt(terminal, command, output, input_line) {
                     const contact_lines = [
                         "Email:   breckynburke@gmail.com",
                         "GitHub:  https://github.com/BreckynDev",
-                        "ID:      try 'whoami"
+                        "ID:      try 'whoami'"
                     ];
                     typeLines(contact_lines, output, 80);
                     setTimeout(() => newLine(terminal, command, output, input_line), contact_lines.length * 80);
@@ -143,7 +143,10 @@ function initPrompt(terminal, command, output, input_line) {
                         "Progress: [####################------] 76%",
                         "Progress: [#######################---] 88%",
                         "Progress: [########################--] 90%",
-                        "CRITICAL_HALT: Optimization loop detected.",
+                        "Progress: [########################--] 90%",
+                        "Progress: [########################--] 90%",
+                        "WARNING: Stuck at 90%. This is fine.",
+                        "CRITICAL_HALT: New idea detected. Restarting from 0%.",
                     ];
                     // A slightly variable delay feels more like a "stuttering" computer
                     typeLines(progress_lines, output, 1500);
