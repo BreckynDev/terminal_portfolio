@@ -7,21 +7,45 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="main-content">
-      <div id="terminal">
-        <div id="header">
-          <p>Welcome to my terminal (v0.1.0)</p>
-          <p>Type `help` for a list of commands.</p>
-        </div>
-        <div id="input-line">
-          <div>
+    <main class="app-window">
+      <section class="workspace">
+        <div id="ascii-art"></div>
+
+        <div id="terminal">
+          <div id="header">
+            <p>Welcome to my terminal (v0.1.3)</p>
+            <p>Type <span class="kw">`help`</span> for a list of commands.</p>
+          </div>
+
+          <div id="input-line">
             <span>guest@terminal.bibs.com:~$ </span>
-            <input type="text" id="command-input" autofocus />
+            <input
+              type="text"
+              id="command-input"
+              class="command-input"
+              autofocus
+            />
+          </div>
+          <div id="output"></div>
+        </div>
+      </section>
+
+      <footer class="vim-statusbar">
+        <div class="tabline">
+          <div class="tab-left">
+            <span class="tab-num"> 0 </span>
+            <span class="tab-name">0:editor+</span>
+            <span class="tab-sep"> 1:note-</span>
+          </div>
+          <div class="tab-right">
+            <span class="hostname">monsantokille</span>
+            <span class="tab-date"> 01-01-2026</span>
+            <span class="tab-time"> 14:10</span>
           </div>
         </div>
-        <div id="output"></div>
-      </div>
-      <script src="script.js" defer></script>
-    </section>
+      </footer>
+    </main>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
