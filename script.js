@@ -69,7 +69,7 @@ function initPrompt(terminal, command, output, input_line) {
                     const contact_lines = [
                         "Email:   breckynburke@gmail.com",
                         "GitHub:  https://github.com/BreckynDev",
-                        "ID:      try 'whoami'"
+                        "ID:      'whoami'"
                     ];
                     typeLines(contact_lines, output, 80);
                     setTimeout(() => newLine(terminal, command, output, input_line), contact_lines.length * 80);
@@ -151,6 +151,15 @@ function initPrompt(terminal, command, output, input_line) {
                     // A slightly variable delay feels more like a "stuttering" computer
                     typeLines(progress_lines, output, 1500);
                     setTimeout(() => newLine(terminal, command, output, input_line), progress_lines.length * 110 + 400);
+                    break;
+
+                case "just one more feature":
+                    textFreeze(terminal, command, output, input_line);
+                    const feature_lines = [
+                        "Never finished this feature only got to '90%'",
+                    ];
+                    typeLines(feature_lines, output, 500);
+                    setTimeout(() => newLine(terminal, command, output, input_line), feature_lines.length * 110 + 400);
                     break;
 
                 default:
